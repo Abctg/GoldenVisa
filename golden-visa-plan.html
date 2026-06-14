@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your UAE Golden Visa Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#EDE4D3;
+    --sand-deep:#E2D5BD;
+    --ink:#1F1B16;
+    --ink-soft:#4A4137;
+    --dusk:#7C3A2D;       /* burnt terracotta */
+    --gold:#B8893B;       /* desert brass */
+    --gold-bright:#D9A741;
+    --teal:#2E5E5B;       /* gulf teal */
+    --paper:#F7F1E6;
+    --line:#CDBFA3;
+    --green:#3E6B4A;
+    --red:#9B3B2E;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+
+  /* ---------- HERO ---------- */
+  header{
+    background:
+      radial-gradient(120% 80% at 80% -10%, rgba(217,167,65,.28), transparent 60%),
+      linear-gradient(180deg,#2A2018 0%, #3A2A1E 55%, #5C3A2A 100%);
+    color:var(--paper);
+    padding:72px 0 64px;
+    border-bottom:3px solid var(--gold);
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold-bright),transparent);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold-bright);margin-bottom:20px;
+  }
+  header h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(38px,7vw,68px);
+    line-height:1.02;
+    letter-spacing:-.015em;
+  }
+  header h1 em{font-style:italic;color:var(--gold-bright)}
+  .sub{
+    margin-top:22px;max-width:560px;
+    font-size:17px;color:rgba(247,241,230,.82);
+  }
+  .facts{
+    margin-top:36px;display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .chip{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;
+    letter-spacing:.04em;
+    border:1px solid rgba(217,167,65,.4);
+    color:var(--paper);
+    padding:7px 13px;border-radius:2px;
+    background:rgba(0,0,0,.18);
+  }
+
+  /* ---------- ROUTE BANNER ---------- */
+  .route{
+    background:var(--teal);color:var(--paper);
+    padding:22px 0;
+  }
+  .route .wrap{display:flex;gap:16px;align-items:flex-start}
+  .route .mark{
+    font-family:'Fraunces',serif;font-size:26px;line-height:1;color:var(--gold-bright);flex:none
+  }
+  .route p{font-size:15px;color:rgba(247,241,230,.9)}
+  .route strong{color:#fff;font-weight:600}
+
+  /* ---------- SECTIONS ---------- */
+  main{padding:64px 0 40px}
+  .phase{margin-bottom:56px}
+  .phase-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+  .phase-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;color:var(--dusk);font-weight:500;
+    letter-spacing:.1em;flex:none;
+    padding-top:6px;
+  }
+  .phase h2{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(24px,4vw,32px);letter-spacing:-.01em;line-height:1.1;
+  }
+  .phase-when{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;
+    color:var(--ink-soft);margin:4px 0 0 0;
+    text-transform:uppercase;letter-spacing:.1em;
+  }
+  .phase-intro{color:var(--ink-soft);margin:18px 0 26px;max-width:640px}
+
+  /* ---------- STEP CARDS ---------- */
+  .step{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    border-radius:4px;
+    padding:22px 24px;
+    margin-bottom:14px;
+    position:relative;
+  }
+  .step.parallel{border-left-color:var(--teal)}
+  .step h3{
+    font-family:'Fraunces',serif;font-weight:600;font-size:19px;
+    margin-bottom:7px;display:flex;align-items:center;gap:10px;
+  }
+  .step h3 .dot{
+    width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none
+  }
+  .step.parallel h3 .dot{background:var(--teal)}
+  .step p{color:var(--ink-soft);font-size:15px}
+  .step ul{margin:10px 0 0;padding-left:18px;color:var(--ink-soft);font-size:15px}
+  .step li{margin-bottom:5px}
+  .step li::marker{color:var(--gold)}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+    background:var(--sand-deep);color:var(--ink-soft);
+  }
+  .tag.online{background:#DDEAE3;color:var(--teal)}
+  .tag.cost{background:#F0E2C4;color:#7a5a18}
+  .tag.cash{background:#F3DDD7;color:var(--red)}
+
+  .parallel-band{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--teal);
+    display:flex;align-items:center;gap:10px;margin:0 0 12px 2px;
+  }
+  .parallel-band::before{content:"";height:1px;width:24px;background:var(--teal)}
+
+  /* ---------- MILESTONE ---------- */
+  .milestone{
+    background:linear-gradient(100deg,var(--dusk),#9A5034);
+    color:var(--paper);border-radius:6px;padding:26px 28px;margin:30px 0;
+    border:1px solid rgba(0,0,0,.1);
+  }
+  .milestone .label{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--gold-bright);margin-bottom:8px
+  }
+  .milestone p{font-family:'Fraunces',serif;font-size:21px;line-height:1.3}
+
+  /* ---------- WARNINGS ---------- */
+  .warn{
+    background:#FBEEE9;border:1px solid #E4B7A8;border-radius:4px;
+    padding:14px 18px;margin-top:14px;font-size:14px;color:#6E3325;
+  }
+  .warn strong{color:var(--red)}
+
+  /* ---------- COST TABLE ---------- */
+  .cost-section{background:var(--paper);border-top:3px solid var(--gold);padding:56px 0}
+  .cost-section h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size:30px;margin-bottom:6px
+  }
+  .cost-section .note{color:var(--ink-soft);font-size:14px;margin-bottom:28px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th{
+    text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+    padding:10px 12px;border-bottom:2px solid var(--line)
+  }
+  th.r,td.r{text-align:right;font-variant-numeric:tabular-nums}
+  td{padding:11px 12px;border-bottom:1px solid var(--sand-deep);color:var(--ink-soft)}
+  td.item{color:var(--ink)}
+  tr.opt td{font-style:italic}
+  tr.opt td.item::after{content:" · optional";font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:.05em}
+  .total-row td{
+    border-top:2px solid var(--gold);border-bottom:none;
+    font-family:'Fraunces',serif;font-size:18px;color:var(--ink);padding-top:16px
+  }
+  .total-row td.r{color:var(--dusk);font-weight:600}
+
+  /* ---------- CHECKLIST FOOTER ---------- */
+  .verify{background:var(--ink);color:var(--paper);padding:52px 0}
+  .verify h2{font-family:'Fraunces',serif;font-size:27px;margin-bottom:8px}
+  .verify .lead{color:rgba(247,241,230,.7);margin-bottom:24px;font-size:15px;max-width:560px}
+  .vitem{
+    display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)
+  }
+  .vitem:last-child{border-bottom:none}
+  .vnum{font-family:'IBM Plex Mono',monospace;color:var(--gold-bright);font-size:13px;flex:none;padding-top:2px}
+  .vitem p{font-size:15px;color:rgba(247,241,230,.85)}
+  .vitem strong{color:#fff}
+  .mail{color:var(--gold-bright);font-family:'IBM Plex Mono',monospace;font-size:13px}
+
+  footer{background:var(--ink);color:rgba(247,241,230,.4);font-size:12px;text-align:center;padding:0 0 36px;font-family:'IBM Plex Mono',monospace;letter-spacing:.04em}
+
+  @media (max-width:560px){
+    header{padding:52px 0 44px}
+    .phase-head{flex-direction:column;gap:2px}
+    .phase-num{padding-top:0}
+    .route .wrap{flex-direction:column;gap:8px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .step,.milestone,.phase{opacity:0;transform:translateY(14px);animation:rise .6s ease forwards}
+    .step{animation-delay:.05s}
+    @keyframes rise{to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">10-Year Residency · Top Graduate Route</div>
+    <h1>Your route to a UAE <em>Golden Visa</em>.</h1>
+    <p class="sub">A start-to-finish plan built around your situation: an LSE graduate, an Indian passport with a US visa, and a goal of holding 10-year residency as a standing option — done online wherever the rules allow.</p>
+    <div class="facts">
+      <span class="chip">LSE · Bachelor's · 2026</span>
+      <span class="chip">Indian passport + US visa</span>
+      <span class="chip">Abu Dhabi (ADRO) route</span>
+      <span class="chip">~2–3 months end to end</span>
+    </div>
+  </div>
+</header>
+
+<div class="route">
+  <div class="wrap">
+    <span class="mark">→</span>
+    <p><strong>Why the Abu Dhabi route.</strong> It lets you submit the nomination from outside the UAE and get the eligibility decision <strong>before you travel</strong> — so you only fly in once you already know you're approved. The Dubai route (used in the guide you read) requires you to be physically present and apply on a gamble. Abu Dhabi is your primary path; Dubai is the fallback if ADRO isn't issuing this category when you apply.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- PHASE 0 -->
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">PHASE 0</span>
+      <div>
+        <h2>Set up before you graduate</h2>
+        <p class="phase-when">Now → July · all online</p>
+      </div>
+    </div>
+    <p class="phase-intro">Nothing here needs your degree in hand yet. Doing it now means you can move the moment LSE confers your award.</p>
+
+    <div class="step">
+      <h3><span class="dot"></span>Create a UAE Pass account</h3>
+      <p>This is the digital ID you'll log in with for the equivalency step and the nomination. Set it up early so it's ready.</p>
+      <div class="meta"><span class="tag online">Online</span></div>
+    </div>
+
+    <div class="step">
+      <h3><span class="dot"></span>Check your US visa validity</h3>
+      <p>Your US visa is what gets you UAE visa-on-arrival as an Indian citizen. Confirm it has at least 6 months left from your expected arrival date — and that your passport does too.</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="dot"></span>Pre-order LSE documents &amp; warn the registry</h3>
+      <p>Ask LSE registry now for the three documents you'll need, and tell them DataFlow will contact them to verify your graduation — this pre-empts the biggest delay in the whole process.</p>
+      <ul>
+        <li>Official degree certificate</li>
+        <li>Official transcript with numerical marks</li>
+        <li>Official grading-scale statement (First = 70%+, etc.) — this is how you prove your result clears 3.5/4.0, since LSE won't issue a GPA</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h3><span class="dot"></span>Confirm LSE is on the recognised list</h3>
+      <p>Verify LSE appears on the current UAE Ministry of Education top-100 list (it qualifies via QS/THE, but check the live list).</p>
+    </div>
+  </section>
+
+  <!-- PHASE 1 -->
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">PHASE 1</span>
+      <div>
+        <h2>Verify &amp; legalise your degree</h2>
+        <p class="phase-when">July, once conferred · run both tracks at once</p>
+      </div>
+    </div>
+    <p class="phase-intro">These two tracks are the slow part — so run them in parallel, not one after the other. This is where time is won or lost.</p>
+
+    <div class="parallel-band">Track A — runs alongside Track B</div>
+    <div class="step parallel">
+      <h3><span class="dot"></span>MoHESR degree equivalency (via DataFlow)</h3>
+      <p>Start on the MoHESR site; it redirects you to DataFlow. They contact LSE to confirm your graduation, then MoHESR issues the equivalency certificate — the UAE's own recognition of your degree. Budget several weeks; it's the slowest link, which is why you pre-warned the registry.</p>
+      <div class="meta">
+        <span class="tag online">Mostly online</span>
+        <span class="tag cost">≈ £130 DataFlow</span>
+        <span class="tag cost">≈ £20 MoHESR</span>
+      </div>
+    </div>
+
+    <div class="parallel-band">Track B — runs alongside Track A</div>
+    <div class="step parallel">
+      <h3><span class="dot"></span>Attest your documents (e-Apostille → digital embassy)</h3>
+      <p>The fully-digital chain, in strict order:</p>
+      <ul>
+        <li><strong>Solicitor certification</strong> with a Qualified Electronic Signature — done online in a short video ID meeting</li>
+        <li><strong>FCDO e-Apostille</strong> — digital, usually ~2 working days (no posting originals)</li>
+        <li><strong>UAE Embassy London digital attestation</strong> — MOFA included, returned as a QR-coded PDF by email</li>
+      </ul>
+      <div class="meta">
+        <span class="tag online">Online</span>
+        <span class="tag cost">≈ £90–150 per document</span>
+      </div>
+      <div class="warn"><strong>Order matters:</strong> the UAE Embassy won't accept anything without the FCDO apostille first. And each document is processed separately — no bundling.</div>
+    </div>
+  </section>
+
+  <!-- PHASE 2 -->
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">PHASE 2</span>
+      <div>
+        <h2>Submit the nomination from home</h2>
+        <p class="phase-when">Once Phase 1 is done · online</p>
+      </div>
+    </div>
+    <p class="phase-intro">With the equivalency and attested documents in hand, you apply for the nomination from outside the UAE through ADRO / TAMM.</p>
+
+    <div class="step">
+      <h3><span class="dot"></span>File the Golden Visa nomination (ADRO/TAMM)</h3>
+      <p>Submit your academic documents and wait for pre-approval — typically a few weeks. Do this yourself rather than paying a centre to upload forms for you.</p>
+      <div class="meta">
+        <span class="tag online">Online</span>
+        <span class="tag cost">≈ £30</span>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="label">The milestone you wanted</div>
+      <p>Once nomination is approved, you know you're in — before booking a single flight. Everything after this is procedural.</p>
+    </div>
+  </section>
+
+  <!-- PHASE 3 -->
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">PHASE 3</span>
+      <div>
+        <h2>One trip to the UAE</h2>
+        <p class="phase-when">Only after pre-approval · in person</p>
+      </div>
+    </div>
+    <p class="phase-intro">This is the only part that must be done on the ground, and your 14-day visa-on-arrival covers it comfortably. Do the medical, biometrics and Emirates ID together — the biometrics are tied to visa activation, so don't plan to skip them and return later.</p>
+
+    <div class="step">
+      <h3><span class="dot"></span>Enter on visa-on-arrival</h3>
+      <p>Your US visa makes you eligible. You can pre-arrange it online before flying rather than queuing at the airport counter.</p>
+      <div class="meta"><span class="tag cost">≈ £25</span></div>
+    </div>
+
+    <div class="step">
+      <h3><span class="dot"></span>Golden Visa application</h3>
+      <p>Submit the formal application with your nomination approval. This is the single biggest fee.</p>
+      <div class="meta"><span class="tag cost">≈ £575</span><span class="tag cash">Pay cash</span></div>
+    </div>
+
+    <div class="step">
+      <h3><span class="dot"></span>Medical fitness test</h3>
+      <p>Blood test + chest X-ray. Smart Salem turns it around in ~30 minutes if you want speed; standard centres are cheaper if you're not rushing.</p>
+      <div class="meta"><span class="tag cost">≈ £65–150</span></div>
+    </div>
+
+    <div class="step">
+      <h3><span class="dot"></span>Biometrics + Emirates ID</h3>
+      <p>Fingerprints, palms and your signature at a Customer Happiness Center (Al Ghazal or Al Nahda). You get a usable digital ID almost immediately; the physical card follows in days.</p>
+      <div class="meta"><span class="tag cost">≈ £240</span></div>
+      <div class="warn"><strong>The timing trap:</strong> the Golden Visa biometrics counter runs <strong>7 AM–3 PM only</strong>, one counter. Go at 7 AM. And take your time on the signature — it's printed permanently on the card.</div>
+    </div>
+
+    <div class="milestone">
+      <div class="label">Done</div>
+      <p>You hold 10-year, self-sponsored residency. You can leave and stay away indefinitely without losing it — it's yours as a standing option.</p>
+    </div>
+  </section>
+
+  <!-- WORK NOTE -->
+  <section class="phase">
+    <div class="phase-head">
+      <span class="phase-num">NOTE</span>
+      <div>
+        <h2>About working</h2>
+      </div>
+    </div>
+    <div class="step parallel">
+      <h3><span class="dot"></span>The visa is residency, not a work permit</h3>
+      <p>The Golden Visa lets you live in the UAE and self-sponsor, but to take a salaried job you (via the employer) still need a MOHRE work permit. It's a quick, employer-driven step — about 5 working days, since your medical, Emirates ID and residence are already done — not a barrier. Running your own company or freelancing under the right setup doesn't need an employer's labour card. Never work on a visit visa.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- COSTS -->
+<section class="cost-section">
+  <div class="wrap">
+    <h2>What it costs</h2>
+    <p class="note">Converted at roughly 1 AED ≈ £0.20. Excludes flights and accommodation. Rates move, so treat these as close estimates.</p>
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Stage</th><th class="r">Approx. (GBP)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="item">DataFlow verification</td><td>Pre-UAE</td><td class="r">£130</td></tr>
+        <tr><td class="item">MoHESR equivalency</td><td>Pre-UAE</td><td class="r">£20</td></tr>
+        <tr><td class="item">Document attestation (1–3 docs)</td><td>Pre-UAE</td><td class="r">£90–450</td></tr>
+        <tr><td class="item">Visa-on-arrival entry</td><td>Trip</td><td class="r">£25</td></tr>
+        <tr><td class="item">Nomination fee</td><td>Trip</td><td class="r">£30</td></tr>
+        <tr><td class="item">Golden Visa application</td><td>Trip</td><td class="r">£575</td></tr>
+        <tr><td class="item">Medical test</td><td>Trip</td><td class="r">£65–150</td></tr>
+        <tr><td class="item">Emirates ID (10-year)</td><td>Trip</td><td class="r">£240</td></tr>
+        <tr class="total-row"><td>Process total</td><td></td><td class="r">£1,350–1,650</td></tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:22px">Add roughly £400–900+ for a return flight and a few nights' stay, for an all-in figure around £1,800–2,500. You can trim costs by attesting only the documents ADRO actually requires, choosing a standard medical centre, doing forms yourself, and paying centres in cash to dodge the 2.5% card surcharge.</p>
+  </div>
+</section>
+
+<!-- VERIFY -->
+<section class="verify">
+  <div class="wrap">
+    <h2>Confirm these two things first</h2>
+    <p class="lead">The plan is solid, but two points can only be settled by the authority — confirm them before you spend money, so you don't over- or under-prepare.</p>
+    <div class="vitem">
+      <span class="vnum">01</span>
+      <p><strong>Is ADRO currently issuing the graduate category?</strong> It was on hold during the guide author's attempt. The outside-UAE, approval-first route only works if it's live.</p>
+    </div>
+    <div class="vitem">
+      <span class="vnum">02</span>
+      <p><strong>Will ADRO accept the digital e-Apostille + digital embassy attestation</strong> — and is full attestation even needed if you already hold the MoHESR equivalency? This decides whether you attest one document or three.</p>
+    </div>
+    <div class="vitem">
+      <span class="vnum">→</span>
+      <p>Ask both in one email to <span class="mail">contact@tamm.abudhabi</span>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Personal planning guide · figures and rules are estimates — verify with ADRO / ICP before relying on them</div>
+</footer>
+
+</body>
+</html>
